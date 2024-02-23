@@ -121,6 +121,8 @@ hr {
 }
 
 .hero-bg {
+  width: 718.33px;
+  height: 570.47px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -130,7 +132,19 @@ hr {
   min-height: calc(100vh - 99px);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 750px;
+
+  @media (max-width: 1150px) {
+    background-size: 70%;
+  }
+
+  @media (max-width: 1000px) {
+    background-size: 60%;
+  }
+
+  @media (max-width: 750px) {
+    background-size: 50%;
+  }
 
   button {
     display: flex;
@@ -171,28 +185,24 @@ hr {
     font-size: 305px;
     font-weight: 900;
     line-height: 250px;
-    @media (max-width: 1500px) {
-      font-size: 280px;
-      font-weight: 800;
-      line-height: 240px;
-    }
-    @media (max-width: 1400px) {
-      font-size: 270px;
-      font-weight: 700;
-      line-height: 230px;
-    }
-    @media (max-width: 1300px) {
+
+    @media (max-width: 1150px) {
       font-size: 250px;
-      line-height: 220px;
-    }
-    @media (max-width: 1200px) {
-      font-size: 230px;
       line-height: 200px;
     }
-    @media (max-width: 1100px) {
-      font-size: 220px;
+
+    @media (max-width: 900px) {
+      font-size: 180px;
+      line-height: 180px;
+      font-weight: 800;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 750px) {
+      margin-top: 4rem;
+      font-size: 150px;
+      line-height: 120px;
       font-weight: 700;
-      line-height: 100px;
     }
 
     span {
@@ -213,6 +223,7 @@ hr {
 /* hero section */
 
 .about-wrapper {
+  margin-bottom: 4rem;
   margin-top: 4rem;
   h2 {
     display: flex;
@@ -221,6 +232,13 @@ hr {
     font-weight: 700;
     text-transform: capitalize;
   }
+}
+
+.about-main {
+  background-image: url(./gallary/3d\ animation.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 350px;
 }
 
 .about-flex {
@@ -240,8 +258,14 @@ hr {
 }
 
 .about-text {
+  width: 840px;
   display: flex;
   padding-left: 4rem;
+
+  @media (max-width: 1150px) {
+    width: 100%;
+    padding-left: 2rem;
+  }
 
   @media (max-width: 600px) {
     padding-left: 1rem;
@@ -260,4 +284,202 @@ hr {
   img {
     width: 100%;
   }
+}
+
+/* stake section */
+
+.stake-h2 {
+  margin-block: 5rem;
+  h2 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    margin: 2rem 0;
+  }
+}
+
+.stake-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.stake-one {
+  border: 1px solid #798399;
+  border-radius: 20px 0 0 20px;
+  background-color: #798399;
+  flex: 1;
+  h3 {
+    display: flex;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: white;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  p {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 2rem;
+  }
+
+  input {
+    display: flex;
+    margin-inline: auto;
+    width: 440px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: rgba(121, 131, 153, 1);
+
+    text-transform: uppercase;
+    color: white;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    background-color: rgba(121, 131, 153, 1);
+    width: 137px;
+    height: 36px;
+    border-radius: 40px;
+    border: 1px solid white;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+}
+
+.pool {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: white;
+  }
+}
+
+/* stake two */
+
+.stake-two {
+  background-color: rgba(121, 153, 130, 1);
+  flex: 1;
+  height: 367px;
+
+  h3 {
+    display: flex;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: white;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  p {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 2rem;
+  }
+
+  input {
+    display: flex;
+    margin-inline: auto;
+    width: 440px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: rgba(121, 153, 130, 1);
+
+    text-transform: uppercase;
+    color: white;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    background-color: rgba(121, 153, 130, 1);
+    width: 137px;
+    height: 36px;
+    border-radius: 40px;
+    border: 1px solid white;
+
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+}
+
+/* stake three */
+
+.stake-three {
+  border: 1px solid #f3ce8c;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #f3ce8c;
+  height: 367px;
+  flex: 1;
+  text-transform: uppercase;
+  h3 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 45px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+}
+
+.stake-three-part {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
 }
