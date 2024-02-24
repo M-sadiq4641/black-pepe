@@ -82,36 +82,20 @@ body {
 
 .first-div {
   display: flex;
-  justify-content: space-between;
-  width: 260px;
+  justify-content: start;
   align-items: center;
 
-  @media (max-width: 1100px) {
-    width: 220px;
-  }
   @media (max-width: 670px) {
     justify-content: start;
   }
 }
 
 .second-div {
-  width: 720px;
+  flex: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 2rem;
   align-items: center;
-
-  @media (max-width: 1320px) {
-    width: 650px;
-  }
-  @media (max-width: 1150px) {
-    width: 600px;
-  }
-  @media (max-width: 1050px) {
-    width: 450px;
-  }
-  @media (max-width: 900px) {
-    justify-content: end;
-  }
 }
 
 /* hero section */
@@ -130,19 +114,22 @@ hr {
   min-height: calc(100vh - 99px);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 800px;
 
-  @media (max-width: 1150px) {
-    background-size: 70%;
+  @media (max-width: 992px) {
+    background-size: 600px;
+  }
+  @media (max-width: 500px) {
+    background-size: contain;
   }
 
-  @media (max-width: 1000px) {
+  /* @media (max-width: 1000px) {
     background-size: 60%;
   }
 
   @media (max-width: 750px) {
     background-size: 50%;
-  }
+  } */
 
   button {
     display: flex;
@@ -168,6 +155,10 @@ hr {
     width: 208px;
     height: 58px;
     border-radius: 56.63px;
+
+    @media (max-width: 500px) {
+      bottom: 150px;
+    }
   }
 }
 
@@ -175,6 +166,12 @@ hr {
   position: absolute;
   left: 0;
   bottom: 8%;
+
+  @media (max-width: 500px) {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .hero-text {
@@ -201,6 +198,9 @@ hr {
       font-size: 150px;
       line-height: 120px;
       font-weight: 700;
+    }
+    @media (max-width: 500px) {
+      font-size: 100px;
     }
 
     span {
@@ -253,6 +253,17 @@ hr {
   @media (max-width: 1160px) {
     flex-direction: column;
   }
+  @media (max-width: 500px) {
+    padding: 8px 1rem;
+  }
+}
+
+.monkey-bg {
+  @media (max-width: 500px) {
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .about-text {
@@ -262,11 +273,13 @@ hr {
 
   @media (max-width: 1150px) {
     width: 100%;
-    padding-left: 2rem;
+    padding-left: 0rem;
   }
 
-  @media (max-width: 600px) {
-    padding-left: 1rem;
+  img {
+    @media (max-width: 1160px) {
+      display: none;
+    }
   }
 
   p {
@@ -275,6 +288,14 @@ hr {
     line-height: 28px;
 
     padding-left: 2rem;
+
+    @media (max-width: 1160px) {
+      padding-left: 0;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -302,7 +323,6 @@ hr {
 }
 
 .stake-wrapper {
-  min-width: 1200px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -314,6 +334,8 @@ hr {
   border-radius: 20px 0 0 20px;
   background-color: #798399;
   flex: 1;
+  padding: 0 2rem;
+
   h3 {
     display: flex;
     font-size: 24px;
@@ -339,7 +361,7 @@ hr {
   input {
     display: flex;
     margin-inline: auto;
-    width: 440px;
+    width: 100%;
     height: 32px;
     border-radius: 5px;
     border: 1px solid white;
@@ -347,6 +369,12 @@ hr {
 
     text-transform: uppercase;
     color: white;
+    padding-inline: 1rem;
+    outline: none;
+  }
+  input::placeholder {
+    color: white;
+    opacity: 1;
   }
 
   button {
@@ -388,7 +416,7 @@ hr {
 .stake-two {
   background-color: rgba(121, 153, 130, 1);
   flex: 1;
-  height: 367px;
+  min-height: 367px;
 
   h3 {
     display: flex;
@@ -422,6 +450,12 @@ hr {
     background-color: rgba(121, 153, 130, 1);
     text-transform: uppercase;
     color: white;
+    padding-inline: 1rem;
+    outline: none;
+  }
+  input::placeholder {
+    color: white;
+    opacity: 1;
   }
 
   button {
@@ -529,6 +563,7 @@ hr {
     font-size: 19px;
     font-weight: 800;
     line-height: 28px;
+    text-transform: uppercase;
   }
 
   td {
@@ -555,3 +590,60 @@ hr {
 }
 
 /* how section */
+
+.why-3d {
+  background-image: url(./gallary/3d\ animation\ 3.png);
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.how-wrapper {
+  h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 5rem 0;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  div {
+    min-height: 120px;
+    border-radius: 20px;
+    margin-block: 1rem;
+    border: 1px solid #7e7e7e;
+    padding: 15px 10px;
+    text-align: left;
+  }
+
+  h3 {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+
+  p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: capitalize;
+  }
+}
+
+/* Tokenomics section */
+
+/* .take-wrapper {
+  min-height: 100vh;
+  background-image: url(./gallary/Group\ 485.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  transform: translatex(2%);
+} */
