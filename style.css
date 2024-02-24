@@ -327,6 +327,11 @@ hr {
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 4rem;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .stake-one {
@@ -334,16 +339,20 @@ hr {
   border-radius: 20px 0 0 20px;
   background-color: #798399;
   flex: 1;
-  padding: 0 2rem;
+  min-height: 367px;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    border-radius: 20px;
+  }
 
   h3 {
-    display: flex;
+    text-align: center;
     font-size: 24px;
     font-weight: 800;
     line-height: 28px;
     text-transform: uppercase;
     color: white;
-    justify-content: center;
     padding-top: 2rem;
     padding-bottom: 4rem;
   }
@@ -359,8 +368,6 @@ hr {
   }
 
   input {
-    display: flex;
-    margin-inline: auto;
     width: 100%;
     height: 32px;
     border-radius: 5px;
@@ -369,7 +376,6 @@ hr {
 
     text-transform: uppercase;
     color: white;
-    padding-inline: 1rem;
     outline: none;
   }
   input::placeholder {
@@ -377,7 +383,7 @@ hr {
     opacity: 1;
   }
 
-  button {
+  .stake-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -412,20 +418,45 @@ hr {
 }
 
 /* stake two */
+.padding-div {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+
+  button {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    right: 25px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+}
 
 .stake-two {
+  border: 1px solid rgba(121, 153, 130, 1);
   background-color: rgba(121, 153, 130, 1);
   flex: 1;
   min-height: 367px;
 
+  @media (max-width: 1200px) {
+    width: 100%;
+    border-radius: 20px;
+  }
+
   h3 {
-    display: flex;
+    text-align: center;
     font-size: 24px;
     font-weight: 800;
     line-height: 28px;
     text-transform: uppercase;
     color: white;
-    justify-content: center;
     padding-top: 2rem;
     padding-bottom: 4rem;
   }
@@ -441,16 +472,13 @@ hr {
   }
 
   input {
-    display: flex;
-    margin-inline: auto;
-    width: 440px;
+    width: 100%;
     height: 32px;
     border-radius: 5px;
     border: 1px solid white;
     background-color: rgba(121, 153, 130, 1);
     text-transform: uppercase;
     color: white;
-    padding-inline: 1rem;
     outline: none;
   }
   input::placeholder {
@@ -458,7 +486,7 @@ hr {
     opacity: 1;
   }
 
-  button {
+  .stake-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -482,13 +510,18 @@ hr {
 /* stake three */
 
 .stake-three {
-  min-width: 400px;
+  width: 100%;
   border: 1px solid #f3ce8c;
   border-radius: 0px 20px 20px 0px;
   background-color: #f3ce8c;
   height: 367px;
   flex: 1;
   text-transform: uppercase;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    border-radius: 20px;
+  }
 
   h3 {
     font-size: 24px;
