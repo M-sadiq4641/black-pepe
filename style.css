@@ -64,6 +64,7 @@ body {
     line-height: 28px;
     letter-spacing: 0em;
     text-align: center;
+    cursor: pointer;
 
     width: 135px;
     height: 37px;
@@ -319,6 +320,20 @@ hr {
     justify-content: center;
     text-transform: capitalize;
     margin: 2rem 0;
+
+    @media (max-width: 640px) {
+      font-size: 50px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 30px;
+      font-weight: 800;
+    }
   }
 }
 
@@ -372,11 +387,12 @@ hr {
     height: 32px;
     border-radius: 5px;
     border: 1px solid white;
-    background-color: rgba(121, 131, 153, 1);
+    background-color: transparent;
 
     text-transform: uppercase;
     color: white;
     outline: none;
+    padding-left: 1rem;
   }
   input::placeholder {
     color: white;
@@ -420,7 +436,7 @@ hr {
 /* stake two */
 .padding-div {
   padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 2rem;
   position: relative;
 
   button {
@@ -476,10 +492,11 @@ hr {
     height: 32px;
     border-radius: 5px;
     border: 1px solid white;
-    background-color: rgba(121, 153, 130, 1);
+    background-color: transparent;
     text-transform: uppercase;
     color: white;
     outline: none;
+    padding-left: 1rem;
   }
   input::placeholder {
     color: white;
@@ -561,6 +578,27 @@ hr {
   font-size: 50px;
   font-weight: 600;
   line-height: 28px;
+
+  @media (max-width: 750px) {
+    font-size: 40px;
+    margin: 2rem;
+  }
+
+  @media (max-width: 630px) {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 20px;
+  }
+  @media (max-width: 360px) {
+    text-align: center;
+    line-height: 40px;
+  }
 }
 
 /* table */
@@ -578,10 +616,19 @@ hr {
 
   border-radius: 20px;
 
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+  }
   table {
     text-align: center;
     border-collapse: collapse;
     width: 100%;
+
+    @media (max-width: 600px) {
+      min-width: 100%;
+    }
   }
   th,
   td {
@@ -597,6 +644,12 @@ hr {
     font-weight: 800;
     line-height: 28px;
     text-transform: uppercase;
+
+    @media (max-width: 600px) {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 700;
+    }
   }
 
   td {
@@ -604,6 +657,11 @@ hr {
     font-weight: 600;
     line-height: 25px;
     text-transform: uppercase;
+
+    @media (max-width: 630px) {
+      font-size: 12px;
+      font-weight: normal;
+    }
   }
 
   button {
@@ -619,6 +677,15 @@ hr {
     line-height: 17px;
     letter-spacing: 2px;
     cursor: pointer;
+
+    @media (max-width: 450px) {
+      width: 60px;
+      height: 20px;
+      border-radius: 20px;
+      font-size: 9px;
+      line-height: normal;
+      letter-spacing: normal;
+    }
   }
 }
 
@@ -639,6 +706,11 @@ hr {
 
     display: flex;
     justify-content: center;
+
+    @media (max-width: 750px) {
+      font-size: 40px;
+      margin: 2rem;
+    }
   }
 
   div {
@@ -651,32 +723,39 @@ hr {
   }
 
   h3 {
-    padding-top: 1rem;
+    padding-block: 1rem;
     padding-left: 2rem;
-    padding-bottom: 1rem;
     font-size: 24px;
     font-weight: 800;
     line-height: 28px;
     text-transform: uppercase;
+
+    @media (max-width: 500px) {
+      font-size: 16px;
+      padding-block: 4px;
+      padding-left: 8px;
+    }
   }
 
   p {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-inline: 2rem;
     font-size: 21px;
     font-weight: 600;
     line-height: 28px;
     text-transform: capitalize;
+
+    @media (max-width: 500px) {
+      font-size: 14px;
+      padding-inline: 8px;
+      font-weight: normal;
+    }
   }
 }
 
-/* Tokenomics section */
+.back-to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+}
 
-/* .take-wrapper {
-  min-height: 100vh;
-  background-image: url(./gallary/Group\ 485.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 60%;
-  transform: translatex(2%);
-} */
+/* Tokenomics section */
