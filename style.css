@@ -772,10 +772,11 @@ hr {
 }
 
 .back-to-top {
-  position: fixed;
-  right: 10px;
+  text-align: end;
+  position: sticky;
+  right: 20px;
   bottom: 20px;
-  opacity: 0.6;
+  opacity: 0.9;
 
   img:hover {
     background-color: lightblue;
@@ -914,6 +915,14 @@ hr {
 /* take section */
 
 .take5-bg {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 550px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .take-img {
     width: 240px;
     height: 240px;
@@ -925,15 +934,39 @@ hr {
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 830px) {
+      width: 180px;
+      height: 180px;
+    }
+
+    @media (max-width: 415px) {
+      width: 140px;
+      height: 140px;
+    }
+
     img {
       width: fit-content;
       height: 120px;
+
+      @media (max-width: 830px) {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media (max-width: 415px) {
+        width: 80px;
+        height: 80px;
+      }
     }
 
     span {
       font-size: 20px;
       font-weight: 500;
       line-height: 28px;
+
+      @media (max-width: 420px) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -943,10 +976,20 @@ hr {
     line-height: 28px;
     margin-bottom: 2rem;
     text-align: center;
-  }
 
-  img {
-    transform: scaleX(-1);
+    @media (max-width: 830px) {
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 550px) {
+      margin-top: 5rem;
+    }
+
+    @media (max-width: 415px) {
+      margin-top: 3.5rem;
+      font-size: 22px;
+    }
   }
 }
 
@@ -961,6 +1004,10 @@ hr {
 .take-container {
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
 }
 
 .take-two {
@@ -969,16 +1016,35 @@ hr {
   p {
     font-size: 24px;
     font-weight: 600;
+    @media (max-width: 830px) {
+      font-size: 18px;
+      font-weight: 500;
+    }
   }
 
   h4 {
     font-size: 36px;
     font-weight: 600;
+
+    @media (max-width: 830px) {
+      font-size: 28px;
+      font-weight: 500;
+    }
   }
 
   h3 {
     font-size: 34px;
     font-weight: 600;
+
+    @media (max-width: 830px) {
+      font-size: 26px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 330px) {
+      font-size: 22px;
+      font-weight: 600;
+    }
   }
 }
 
@@ -988,16 +1054,27 @@ hr {
   font-size: 60px;
   font-weight: 700;
   line-height: 28px;
+  margin-bottom: 2rem;
 }
 
 .five-logo {
   text-align: center;
-  margin-block: 2rem;
+  margin-block: 1rem;
+
   img {
     @media (max-width: 1000px) {
       width: 100px;
       height: 100px;
     }
+
+    @media (max-width: 550px) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: 350px) {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
-
